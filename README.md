@@ -1,4 +1,4 @@
 
-# Main description  
+# Description  
 
-I'm using this repository just so i can learn about javascript and give continuity to a project, but it's likely that i will still end up using this after i finish learning
+I will start using this repository after 2 billion years without using it XD. It still won't be immediatly used but i'm already laying the groundwork.
