@@ -1,0 +1,53 @@
+CREATE DATABASE IF NOT EXISTS curriculo_db CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+USE curriculo_db;
+
+CREATE TABLE IF NOT EXISTS dados_pessoais (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    cargo VARCHAR(100) NOT NULL,
+    resumo TEXT NOT NULL
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS contatos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    dados_pessoais_id INT NOT NULL,
+    tipo VARCHAR(50) NOT NULL,
+    valor VARCHAR(255) NOT NULL,
+    FOREIGN KEY (dados_pessoais_id) REFERENCES dados_pessoais(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS experiencias (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    dados_pessoais_id INT NOT NULL,
+    empresa VARCHAR(100) NOT NULL,
+    funcao VARCHAR(100) NOT NULL,
+    periodo VARCHAR(50) NOT NULL,
+    descricao TEXT,
+    FOREIGN KEY (dados_pessoais_id) REFERENCES dados_pessoais(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS formacao (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    dados_pessoais_id INT NOT NULL,
+    instituicao VARCHAR(100) NOT NULL,
+    curso VARCHAR(100) NOT NULL,
+    periodo VARCHAR(50) NOT NULL,
+    FOREIGN KEY (dados_pessoais_id) REFERENCES dados_pessoais(id) ON DELETE CASCADE
+) ENGINE=InnoDB;
+
+INSERT INTO dados_pessoais (nome, cargo, resumo) VALUES 
+('Carlos Eduardo Silva', 'Desenvolvedor Back-end Junior', 'Desenvolvedor em formação técnica, focado em PHP, MySQL e desenvolvimento web. Busco aperfeiçoamento constante em lógica, arquitetura e boas práticas.');
+
+INSERT INTO contatos (dados_pessoais_id, tipo, valor) VALUES 
+(1, 'E-mail', 'carlos.silva@email.com'),
+(1, 'Telefone', '(11) 98765-4321'),
+(1, 'LinkedIn', 'linkedin.com/in/carlossilva-dev'),
+(1, 'GitHub', 'github.com/carlossilva-dev');
+
+INSERT INTO experiencias (dados_pessoais_id, empresa, funcao, periodo, descricao) VALUES 
+(1, 'Tech Solutions', 'Estagiário de Desenvolvimento', '2023 - 2024', 'Apoio na manutenção de sistemas legados em PHP, suporte na modelagem de banco de dados e testes locais.'),
+(1, 'SoftStudio', 'Suporte Técnico', '2022 - 2023', 'Atendimento de chamados, testes de homologação e documentação interna.');
+
+INSERT INTO formacao (dados_pessoais_id, instituicao, curso, periodo) VALUES 
+(1, 'SENAI', 'Técnico em Desenvolvimento de Sistemas', '2023 - 2024'),
+(1, 'Escola Técnica Estadual', 'Ensino Médio Técnico', '2020 - 2022');
