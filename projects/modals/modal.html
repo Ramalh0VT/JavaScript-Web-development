@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Modal</title>
+</head>
+<body>
+
+    <div class="contador" id="contador">Modal aberta 0 vezes</div>
+
+    <button class="btn" id="btnAbrir">Abrir modal</button>
+
+    <div class="overlay" id="overlay">
+        <div class="modal">
+            <h2>Título da modal</h2>
+            <p>Esse é o conteúdo da modal, com animação suave de entrada e fundo esmaecido.</p>
+            <button class="btn btn-fechar" id="btnFechar">Fechar</button>
+        </div>
+    </div>
+
+<script>
+    const overlay = document.getElementById("overlay");
+    const btnAbrir = document.getElementById("btnAbrir");
+    const btnFechar = document.getElementById("btnFechar");
+    const contador = document.getElementById("contador");
+
+    let vezes = 0;
+
+    const abrirModal = () => {
+        overlay.classList.add("ativo");
+        vezes++;
+        contador.textContent = `Modal aberta ${vezes} vezes`;
+    };
+
+    const fecharModal = () => {
+        overlay.classList.remove("ativo");
+    };
+
+    btnAbrir.addEventListener("click", abrirModal);
+    btnFechar.addEventListener("click", fecharModal);
+    overlay.addEventListener("click", (e) => {
+        if (e.target === overlay) {
+            fecharModal();
+        }
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,100 @@
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+        background: #1a1a2e;
+    }
+
+    .contador {
+        color: #ffffff;
+        font-size: 18px;
+        background: #16213e;
+        padding: 10px 20px;
+        border-radius: 10px;
+    }
+
+    .btn {
+        padding: 14px 28px;
+        font-size: 16px;
+        border: none;
+        border-radius: 10px;
+        background: #6c5ce7;
+        color: #fff;
+        cursor: pointer;
+        transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn:hover {
+        background: #8177e8;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(108, 92, 231, 0.4);
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        visibility: hidden;
+        transition: background 0.3s ease;
+        z-index: 10;
+    }
+
+    .overlay.ativo {
+        background: rgba(0, 0, 0, 0.6);
+        visibility: visible;
+    }
+
+    .modal {
+        background: #ffffff;
+        width: 380px;
+        max-width: 90%;
+        border-radius: 16px;
+        padding: 30px;
+        text-align: center;
+        transform: translateY(-40px) scale(0.95);
+        opacity: 0;
+        transition: transform 0.35s ease, opacity 0.35s ease;
+    }
+
+    .overlay.ativo .modal {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    .modal h2 {
+        margin-bottom: 12px;
+        color: #1a1a2e;
+    }
+
+    .modal p {
+        color: #555;
+        margin-bottom: 24px;
+        line-height: 1.5;
+    }
+
+    .btn-fechar {
+        background: #e74c3c;
+    }
+
+    .btn-fechar:hover {
+        background: #ff6b5b;
+        box-shadow: 0 8px 20px rgba(231, 76, 60, 0.4);
+    }
+</style>

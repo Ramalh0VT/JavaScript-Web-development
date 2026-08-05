@@ -1,0 +1,87 @@
+	let listaProdutos = [
+    {
+        nome: "He-man",
+        descricao: "De mestres do universo",
+        preco: 299.90,
+        tags: ["usado", "em alta"],
+        imagem: ""
+    },
+    {
+        nome: "Leon S. Kennedy",
+        descricao: "De Resident Evil",
+        preco: 599.90,
+        tags: ["novo", "em alta", "Resident Evil"],
+        imagem: ""
+    },
+    {
+        nome: "Arthur Morgan",
+        descricao: "De Red Dead Redemption",
+        preco: 599.90,
+        tags: ["semi-novo", "em alta", "Red Dead Redemption"],
+        imagem: ""
+    },
+    {
+        nome: "Kratos",
+        descricao: "De God of War",
+        preco: 449.90,
+        tags: ["novo", "em alta", "God of War"],
+        imagem: ""
+    },
+    {
+        nome: "Master Chief",
+        descricao: "De Halo",
+        preco: 379.90,
+        tags: ["usado", "Halo"],
+        imagem: ""
+    },
+    {
+        nome: "Geralt de Rívia",
+        descricao: "De The Witcher",
+        preco: 499.90,
+        tags: ["novo", "em alta", "The Witcher"],
+        imagem: ""
+    },
+    {
+        nome: "Ellie",
+        descricao: "De The Last of Us",
+        preco: 429.90,
+        tags: ["semi-novo", "The Last of Us"],
+        imagem: ""
+    },
+    {
+        nome: "Link",
+        descricao: "De Zelda",
+        preco: 349.90,
+        tags: ["novo", "em alta", "Zelda"],
+        imagem: ""
+    },
+    {
+        nome: "Chun-Li",
+        descricao: "De Street Fighter",
+        preco: 259.90,
+        tags: ["usado", "Street Fighter"],
+        imagem: ""
+    },
+    {
+        nome: "Batman",
+        descricao: "De DC Comics",
+        preco: 549.90,
+        tags: ["novo", "em alta", "DC Comics"],
+        imagem: ""
+    },
+    {
+        nome: "Spider-Man",
+        descricao: "De Marvel",
+        preco: 479.90,
+        tags: ["semi-novo", "em alta", "Marvel"],
+        imagem: ""
+    }
+];
+
+const filtrarPorTag = (lista, tag) => {
+    return lista.filter(produto => produto.tags.includes(tag));
+};
+
+let produtosEmAlta = filtrarPorTag(listaProdutos, "em alta");
+
+console.log(produtosEmAlta);
