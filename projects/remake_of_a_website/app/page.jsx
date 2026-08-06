@@ -16,14 +16,14 @@ export default function Home() {
 	 	<button> Work with us</button>
 	  </div>
 
-	  <div>
-		<div><img src = "" alt="imagem"></img><p></p></div>
-		<div><img src = "" alt="imagem"></img><p></p></div>
-		<div><img src = "" alt="imagem"></img><p></p></div>
-		<div><img src = "" alt="imagem"></img><p></p></div>
-		<div><img src = "" alt="imagem"></img><p></p></div>
-		<div><img src = "" alt="imagem"></img><p></p></div>
-	  </div>
+	  <footer>
+		<div><img src = "nil" alt="imagem"></img><p>Facebook premier</p><p>Level agency partner</p></div>
+		<div><img src = "nil" alt="imagem"></img><p></p></div>
+		<div><img src = "nil" alt="imagem"></img><p></p></div>
+		<div><img src = "nil" alt="imagem"></img><p></p></div>
+		<div><img src = "nil" alt="imagem"></img><p></p></div>
+		<div><img src = "nil" alt="imagem"></img><p></p></div>
+	  </footer>
 	</>
   );
 }
