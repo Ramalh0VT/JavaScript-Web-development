@@ -94,5 +94,10 @@ text-decoration:none !important;
 font-family:monospace !important;
 }
 
-
+.cont_simples{
+position:absolute;
+top:100px;
+font-family:monospace;
+color:black;
+}
 
