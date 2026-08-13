@@ -1,0 +1,45 @@
+COMO RODAR O SISTEMA LOCALMENTE
+================================
+
+Pré-requisito: ter o PHP instalado no computador (versão 7.4 ou superior).
+Não é necessário instalar banco de dados separado — o sistema usa SQLite,
+que já vem embutido no PHP, e cria o arquivo "clinica.db" automaticamente
+na primeira execução.
+
+PASSOS:
+
+1. Extraia esta pasta em qualquer lugar do computador (ex: Desktop).
+
+2. Abra o terminal / prompt de comando e navegue até a pasta:
+   cd caminho/para/clinica-mvp
+
+3. Rode o servidor embutido do PHP:
+   php -S localhost:8000
+
+4. Abra o navegador e acesse:
+   http://localhost:8000
+
+Pronto! O sistema estará rodando localmente, sem precisar de internet
+ou instalação de servidor (Apache/Nginx) ou banco de dados externo.
+
+FUNCIONALIDADES:
+- Cadastrar paciente com nome, idade, leito e gravidade (Crítico, Grave, Moderado, Leve)
+- Listar pacientes ordenados automaticamente por gravidade (mais grave primeiro)
+- Filtrar pacientes por nível de gravidade
+- Editar dados de um paciente
+- Excluir paciente da lista
+
+ARQUIVOS:
+- index.php     -> página principal (lista + formulário de cadastro)
+- salvar.php    -> processa o cadastro
+- editar.php    -> formulário de edição
+- atualizar.php -> processa a edição
+- excluir.php   -> remove um paciente
+- db.php        -> conexão e criação do banco SQLite
+- style.css     -> estilo visual
+- clinica.db    -> criado automaticamente (não mexer manualmente)
+
+OBSERVAÇÃO:
+Este é um MVP simples para uso interno da clínica. Não possui login/senha
+nem criptografia — indicado apenas para uso local e organizacional, não
+para expor na internet.
