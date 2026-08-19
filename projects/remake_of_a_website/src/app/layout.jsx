@@ -18,19 +18,15 @@ export const metadata = {
   description: "idk",
 };
 
+import header from "@/components/footer"
+import footer from "@/components/header"
+
 export default function RootLayout({ children }) {
   return (
     <html lang="pt-br" className={`${geistSans.variable} ${geistMono.variable}`}>
       <body>{children}</body>
-	<header>
-	  	<p><Link href="/sobre">Sobre</Link></p>
-	  	<p><Link href="/ayuda">Ayuda</Link></p>
-	  	<p><Link href="/quienessomos"> Quiénes somos</Link></p>
-	 </header>
-		
-	  <footer>
-	  	<p>Todos los derechos reservados à companhia interessante</p>
-	  </footer>
+	<header/>
+	<footer/>
     </html>
   );
 }

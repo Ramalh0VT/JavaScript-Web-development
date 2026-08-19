@@ -1,7 +1,9 @@
+'use client'
+
 let error = "Um erro desconhecido ocorreu!"
 
 
-import css from '../../globals.css'
+import css from './globals.css'
 
 export default function error_show(){
 	return <>
