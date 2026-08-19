@@ -1,0 +1,16 @@
+header{
+display: flex;
+color:black;
+margin-top:0;
+background-color:black;
+}
+
+header p{
+margin-left:100px;	
+}
+
+header p a:link{
+color:white !important;
+text-decoration:none !important;
+font-family:monospace !important;
+}
