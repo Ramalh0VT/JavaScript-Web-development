@@ -1,9 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
 
+const delay = (ms) => new Promise((resolve) => setTimeout(resolve,ms));
 
-export default function Home() {
-  return (
+export default async function Home() {
+  	await delay(3500);
+	return (
 	<>
 		
 			<header className="header"><img src="images/tier.jpeg" width ="100"></img> <a href="nil">What we do</a> <a href="nil">Blog</a><a href="nil">Podcast</a><a href="nil"> Careers</a> <div className="button_cont"><button className="button"> Work with us</button></div></header>

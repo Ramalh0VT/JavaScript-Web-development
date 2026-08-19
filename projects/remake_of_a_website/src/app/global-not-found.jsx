@@ -1,3 +1,7 @@
+import nf_deco from "../components/404_deco.jsx"
+
+
+
 export default function notFound(){
 	return <>
 		<html>
@@ -7,6 +11,8 @@ export default function notFound(){
 				<h2>ERRO 404</h2>
 				<p>Página não encontrada</p>
 			</div>
+			<nf_deco>
+			</nf_deco>
 		</div>
 		</body>
 		</html>
