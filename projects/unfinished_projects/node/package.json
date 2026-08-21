@@ -1,0 +1,24 @@
+{
+  "name": "node",
+  "version": "1.0.0",
+  "description": "hi",
+  "keywords": [
+    "hi"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "dj"
+  },
+  "license": "ISC",
+  "author": "hi",
+  "type": "commonjs",
+  "main": "hihi\"\"\"",
+  "scripts": {
+    "start": "node arguments.js",
+    "check": "node --check arguments.js"
+  },
+  "private": true,
+  "dependencies": {
+    "bootstrap": "^5.3.8"
+  }
+}
