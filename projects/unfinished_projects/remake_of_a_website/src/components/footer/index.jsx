@@ -1,12 +1,9 @@
-import css from "./css.css"
+import "./footer.css";
 
-export default function header(){
-	
-return (<>
-<header>
-	  	<p><Link href="/sobre">Sobre</Link></p>
-	  	<p><Link href="/ayuda">Ayuda</Link></p>
-	  	<p><Link href="/quienessomos"> Quiénes somos</Link></p>
-	 </header>
-);
+export default function Footer() {
+	return (
+		<footer>
+			<p>Todos los derechos reservados à companhia interessante</p>
+		</footer>
+	);
 }
